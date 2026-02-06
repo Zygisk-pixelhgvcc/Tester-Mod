@@ -3,24 +3,108 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Мой сайт</title>
+  <title>APKTool Manager</title>
+  <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
   <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
     body {
-      background: #121212;
-      color: #fff;
-      font-family: sans-serif;
+      background: #0f0f1b;
+      color: #00ffcc;
+      font-family: 'Courier New', monospace;
+      overflow: hidden;
+      height: 100vh;
+      position: relative;
+    }
+    #particles-js {
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      z-index: 0;
+    }
+    .content {
+      position: relative;
+      z-index: 1;
+      text-align: center;
+      padding: 2rem;
       display: flex;
+      flex-direction: column;
       justify-content: center;
       align-items: center;
       height: 100vh;
-      margin: 0;
     }
     h1 {
-      text-align: center;
+      font-size: 3.5rem;
+      margin-bottom: 1.5rem;
+      text-shadow: 0 0 10px #00ffcc, 0 0 20px #00ffcc;
+      animation: glow 2s infinite alternate;
+    }
+    p {
+      font-size: 1.2rem;
+      max-width: 600px;
+      line-height: 1.6;
+      margin-bottom: 2rem;
+    }
+    .btn {
+      background: transparent;
+      color: #00ffcc;
+      border: 2px solid #00ffcc;      padding: 0.8rem 2rem;
+      font-family: inherit;
+      font-size: 1.1rem;
+      cursor: pointer;
+      transition: all 0.3s;
+    }
+    .btn:hover {
+      background: #00ffcc;
+      color: #0f0f1b;
+      box-shadow: 0 0 15px #00ffcc;
+    }
+    @keyframes glow {
+      from { text-shadow: 0 0 5px #00ffcc, 0 0 10px #00ffcc; }
+      to { text-shadow: 0 0 20px #00ffcc, 0 0 30px #00ffcc, 0 0 40px #00aacc; }
     }
   </style>
 </head>
 <body>
-  <h1>Привет, мир! 👋</h1>
+  <div id="particles-js"></div>
+  <div class="content">
+    <h1>APKTool Manager</h1>
+    <p>Современный менеджер для сборки, декомпиляции и подписи APK-файлов прямо на Android. Поддержка AIDE, d8, aapt2 и apksigner.</p>
+    <button class="btn" onclick="alert('Скоро на GitHub!')">Скачать v1.0</button>
+  </div>
+
+  <script>
+    particlesJS("particles-js", {
+      particles: {
+        number: { value: 80, density: { enable: true, value_area: 800 } },
+        color: { value: "#00ffcc" },
+        shape: { type: "circle" },
+        opacity: { value: 0.4, random: true },
+        size: { value: 3, random: true },
+        line_linked: {
+          enable: true,
+          distance: 150,
+          color: "#0088aa",
+          opacity: 0.2,
+          width: 1
+        },
+        move: {
+          enable: true,
+          speed: 1.5,
+          direction: "none",
+          random: true,
+          straight: false,
+          out_mode: "out"
+        }
+      },
+      interactivity: {        detect_on: "canvas",
+        events: {
+          onhover: { enable: true, mode: "repulse" },
+          onclick: { enable: true, mode: "push" },
+          resize: true
+        }
+      },
+      retina_detect: true
+    });
+  </script>
 </body>
 </html>
