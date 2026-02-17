@@ -453,6 +453,253 @@ function showInfo(type) {
   var panel = document.getElementById("infoPanel");
   panel.style.display = "block";
 
+  if (type === "update") {
+    panel.innerHTML =
+      "<h3>Latest Update</h3>" +
+      "<p>Update v3.5.6 - Release<br>" +
+      "• Added Convert to Apk for Split Apk<br>" +
+      "• Added in Editor Scaling\n• Fix Crash for Apk Information<br>" +
+      "• New Function Coding (in Development)<br>" +
+      "• Update Dialog Paste Add New function<br>" +
+      "• Added Code insertion (Java)<br>" +
+      "• Added support for opening .smali, .gradle, .properties, .yml, .yaml, .ini, .cfg, and .conf files in the built-in editor.<br>" +
+      "• Update Syntax<br>" +
+      "• Remove Tool Bar in Editor<br>" +
+      "• Added Warning in Editor<br>" +
+      "• Update API tool<br>" +
+      "• Update Information<br>" +
+      "• Fix Bugs<br>" +
+      "• Minor Edits<br>" +
+      "• Optimized signing process</p>";
+       
+  }
+
+  if (type === "info") {
+    panel.innerHTML =
+      "<h3>Apktool Information</h3>" +
+      "<p>APKTool Manager A universal tool for working with files, folders, APK, etc. " +
+      "<p>Android 13 Support" +
+      "<p>By: DexShelpuS & Toolkit" +  
+      "directly on Android devices using integrated toolchain support.</p>";
+  }
+
+  if (type === "news") {
+    panel.innerHTML =
+      "<h3>News</h3>" +
+      "<p>V3.5.6 Fixed Bugs Optimization & Seeed & Other information in update / About in Apktool.<br>" +
+      "Upcoming: UI improvements & stability fixes.</p>";
+  }
+
+  if (type === "download") {
+    window.location.href = "https://www.mediafire.com/file/w4ipvw0a4h412kf/Apktool_FIX.apk/file";
+  }
+}
+
+/* PARTICLES */
+particlesJS("particles-js", {
+  particles: {
+    number: { value: 80, density: { enable: true, value_area: 800 } },
+    color: { value: "#00ffcc" },
+    shape: { type: "circle" },
+    opacity: { value: 0.4, random: true },
+    size: { value: 3, random: true },
+    line_linked: {
+      enable: true,
+      distance: 150,
+      color: "#0088aa",
+      opacity: 0.2,
+      width: 1
+    },
+    move: {
+      enable: true,
+      speed: 1.5,
+      random: true,
+      out_mode: "out"
+    }
+  },
+  interactivity: {
+    events: {
+      onhover: { enable: true, mode: "repulse" },
+      onclick: { enable: true, mode: "push" }
+    }
+  },
+  retina_detect: true
+});
+</script>
+
+  </body>
+</html>}
+
+.dots {
+  font-size: 28px;
+  cursor: pointer;
+  user-select: none;
+  transition: 0.3s;
+}
+.dots:hover {
+  text-shadow: 0 0 10px #00ffcc;
+}
+
+.dropdown {
+  display: none;
+  flex-direction: column;
+  margin-top: 10px;
+  background: rgba(15,15,27,0.95);
+  border: 1px solid rgba(0,255,204,0.3);
+  border-radius: 15px;
+  padding: 10px;
+  min-width: 180px;
+  backdrop-filter: blur(10px);
+  box-shadow: 0 0 25px rgba(0,255,204,0.2);
+}
+
+.dropdown button {
+  background: transparent;
+  border: none;
+  color: #00ffcc;
+  padding: 10px;
+  text-align: left;
+  cursor: pointer;
+  transition: 0.3s;
+  font-family: inherit;
+}
+.dropdown button:hover {
+  background: rgba(0,255,204,0.1);
+  border-radius: 8px;
+}
+
+/* MAIN WRAPPER */
+.wrapper {
+  position: relative;
+  z-index: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  padding: 40px 20px;
+}
+
+.content {
+  backdrop-filter: blur(15px);
+  background: rgba(15, 15, 27, 0.6);
+  border: 1px solid rgba(0,255,204,0.2);
+  border-radius: 25px;
+  box-shadow: 0 0 50px rgba(0,255,204,0.15);
+  padding: 3rem;
+  width: 100%;
+  max-width: 900px;
+  text-align: center;
+}
+
+h1 {
+  font-size: 3rem;
+  margin-bottom: 1rem;
+  text-shadow: 0 0 15px #00ffcc;
+}
+
+.subtitle {
+  margin-bottom: 2rem;
+  opacity: 0.8;
+}
+
+/* LOWER BUTTONS */
+.menu-buttons {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 15px;
+  margin-bottom: 20px;
+}
+
+.btn {
+  position: relative;
+  overflow: hidden;
+  background: transparent;
+  color: #00ffcc;
+  border: 2px solid #00ffcc;
+  padding: 0.7rem 1.8rem;
+  border-radius: 50px;
+  font-size: 0.9rem;
+  cursor: pointer;
+  transition: 0.3s;
+}
+.btn:hover {
+  background: #00ffcc;
+  color: #0f0f1b;
+  box-shadow: 0 0 15px #00ffcc;
+  transform: scale(1.05);
+}
+
+/* INFO PANEL */
+.info-panel {
+  margin-top: 20px;
+  padding: 20px;
+  border-radius: 15px;
+  background: rgba(0,255,204,0.05);
+  border: 1px solid rgba(0,255,204,0.2);
+  display: none;
+  animation: fadeIn 0.4s ease-in-out;
+  text-align: left;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(10px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+footer {
+  text-align: center;
+  padding: 20px;
+  opacity: 0.6;
+  font-size: 0.8rem;
+}
+</style>
+  </head>
+
+  <body>
+
+    <div id="particles-js"></div>
+
+    <!-- THREE DOT MENU -->
+    <div class="menu-container">
+      <div class="dots" onclick="toggleMenu()">⋮</div>
+      <div class="dropdown" id="dropdownMenu">
+        <button onclick="showInfo('update')">Update</button>
+        <button onclick="showInfo('info')">Apktool Information</button>
+        <button onclick="showInfo('news')">News</button>
+      </div>
+    </div>
+
+    <div class="wrapper">
+      <div class="content">
+        <h1>APKTool Manager</h1>
+        <div class="subtitle">
+          Advanced Android APK build & reverse engineering environment
+        </div>
+
+        <div class="menu-buttons">
+          <button class="btn" onclick="showInfo('download')">Download</button>
+        </div>
+
+        <div id="infoPanel" class="info-panel"></div>
+
+      </div>
+    </div>
+
+    <footer>
+      © 2026 APKTool Manager | Professional Android Toolkit
+    </footer>
+
+<script>
+function toggleMenu() {
+  var menu = document.getElementById("dropdownMenu");
+  menu.style.display = (menu.style.display === "flex") ? "none" : "flex";
+}
+
+function showInfo(type) {
+  var panel = document.getElementById("infoPanel");
+  panel.style.display = "block";
+
   if (type === "Update") {
     panel.innerHTML =
       "<h3>Latest Update</h3>" +
